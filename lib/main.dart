@@ -19,12 +19,13 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      defaultTransition: Transition.downToUp,
       initialRoute: WelcomeScreen.id,
-      routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
-        ShopScreen.id: (context) => ShopScreen(),
-        CardScreen.id: (context) => CardScreen(),
-      },
+      getPages: [
+        GetPage(name: WelcomeScreen.id, page: () => WelcomeScreen()),
+        GetPage(name: ShopScreen.id, page: () => ShopScreen()),
+        GetPage(name: CardScreen.id, page: () => CardScreen()),
+      ],
     );
   }
 }

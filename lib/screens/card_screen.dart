@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CardScreen extends StatefulWidget {
-  static String id = "card_screen";
+  static String id = "/card_screen";
 
   @override
   _CardScreenState createState() => _CardScreenState();

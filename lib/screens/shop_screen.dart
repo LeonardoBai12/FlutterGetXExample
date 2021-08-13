@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:new_app_getx/screens/card_screen.dart';
 
 class ShopScreen extends StatefulWidget {
-  static String id = "shop_screen";
+  static String id = "/shop_screen";
 
   @override
   _ShopScreenState createState() => _ShopScreenState();
