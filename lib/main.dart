@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:new_app_getx/bindings/home_bindings.dart';
 import 'package:new_app_getx/screens/card_screen.dart';
 import 'package:new_app_getx/screens/shop_screen.dart';
-import 'package:new_app_getx/screens/welcome_screen.dart';
+import 'package:new_app_getx/screens/home_screen.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  await GetStorage.init();
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -20,9 +25,12 @@ class _MyAppState extends State<MyApp> {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       defaultTransition: Transition.downToUp,
-      initialRoute: WelcomeScreen.id,
+      initialRoute: HomeScreen.id,
       getPages: [
-        GetPage(name: WelcomeScreen.id, page: () => WelcomeScreen()),
+        GetPage(
+            name: HomeScreen.id,
+            page: () => HomeScreen(),
+            binding: HomeBindings()),
         GetPage(name: ShopScreen.id, page: () => ShopScreen()),
         GetPage(name: CardScreen.id, page: () => CardScreen()),
       ],
