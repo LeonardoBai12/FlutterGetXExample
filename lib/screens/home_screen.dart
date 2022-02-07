@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:new_app_getx/controller/todo_controller.dart';
-import 'package:new_app_getx/models/todo.dart';
 import 'package:new_app_getx/screens/todo_screen.dart';
 
 class HomeScreen extends StatefulWidget {
